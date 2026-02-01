@@ -1,5 +1,8 @@
 const express = require('express');
+const { handleGenerateShortUrl } = require('../controllers/url');
 
-const router = express.Router();
+const urlRouter = express.Router();
 
-router.post('/')
+urlRouter.post('/', handleGenerateShortUrl);
+
+module.exports = urlRouter;
